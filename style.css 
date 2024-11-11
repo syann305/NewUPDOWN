@@ -1,42 +1,59 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #111;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-#container {
+.container {
     text-align: center;
 }
 
 h1 {
+    font-size: 24px;
+    color: white;
     margin-bottom: 20px;
 }
 
-#controls {
-    margin-top: 20px;
+.vote-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 24px;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 10px;
-    font-size: 16px;
+    padding: 10px;
     cursor: pointer;
-    background-color: #3498db;
     border: none;
+    background: none;
     color: white;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-p {
     font-size: 18px;
+}
+
+.upvote {
+    background-color: #4a90e2; /* Blue color for upvote */
+}
+
+.downvote {
+    background-color: #e94e36; /* Red color for downvote */
+}
+
+#upvoteCount, #downvoteCount {
+    font-size: 24px;
+    color: white;
+}
+
+.image-container {
+    margin-top: 30px;
+}
+
+img {
+    width: 200px; /* Starting width */
+    height: auto;
+    transition: width 0.3s ease-in-out; /* Smooth transition for resizing */
 }

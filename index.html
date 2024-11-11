@@ -3,30 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Model Viewer</title>
     <link rel="stylesheet" href="style.css">
+    <title>Image Growth Simulation</title>
 </head>
 <body>
-    <div id="container">
-        <h1>Interact with 3D Model</h1>
-        
-        <!-- 3D model viewer -->
-        <div id="modelViewer" style="width: 100%; height: 600px;"></div>
-        
-        <!-- Buttons for interaction -->
-        <div id="controls">
-            <button id="upvoteButton">Upvote</button>
-            <button id="downvoteButton">Downvote</button>
-            <p>Upvotes: <span id="upvoteCount">0</span></p>
-            <p>Downvotes: <span id="downvoteCount">0</span></p>
+    <div class="container">
+        <h1>Add muscle or lose weight?</h1>
+        <div class="vote-buttons">
+            <button class="upvote" onclick="incrementUpvote()">Upvote</button>
+            <span id="upvoteCount">0k</span>
+            <button class="downvote" onclick="incrementDownvote()">Downvote</button>
+            <span id="downvoteCount">0k</span>
+        </div>
+
+        <!-- 2D Image Display -->
+        <div class="image-container">
+            <img id="muscleImage" src="assets/image.jpg" alt="Muscle Image">
         </div>
     </div>
 
-    <!-- THREE.js and GLTFLoader -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
-
-    <!-- Custom JS for 3D model logic -->
     <script src="app.js"></script>
 </body>
 </html>
+tml>
