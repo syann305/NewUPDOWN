@@ -1,9 +1,8 @@
-// Initialize scene, camera, renderer, and model
 let scene, camera, renderer, model;
 let upvotes = 0, downvotes = 0;
 let scale = 1; // Initial scale of the model
 
-// Set up Three.js scene
+// Set up the Three.js scene
 function init() {
     // Create the scene
     scene = new THREE.Scene();
@@ -32,6 +31,8 @@ function init() {
         model.scale.set(scale, scale, scale); // Set initial scale
         camera.position.z = 5;
         animate();
+    }, undefined, function (error) {
+        console.error('Error loading model:', error);
     });
 
     // Set up event listeners for buttons
